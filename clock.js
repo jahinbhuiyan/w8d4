@@ -5,20 +5,16 @@ class Clock {
     this.minutes = date.getMinutes();
     this.seconds = date.getSeconds();
 
-    // setInterval(() => {
-    //   //  const date = new Date();
-    //   //  console.log(date)
-    //   this._tick();
-    // }, 1000);
+    setInterval(this._tick.bind(this), 1000);
   }
 
-  start() {
-    setInterval(() => {
-      //  const date = new Date();
-      //  console.log(date)
-      this._tick();
-    }, 1000);
-  }
+  // start() {
+  //   setInterval(() => {
+  //     //  const date = new Date();
+  //     //  console.log(date)
+  //     this._tick();
+  //   }, 1000);
+  // }
 
 
   printTime() {
@@ -44,7 +40,7 @@ class Clock {
         }
       }
     }
-
+    // console.log(this)
     this.printTime()
     
   } // END 
